@@ -1,0 +1,34 @@
+<app-navbar></app-navbar>
+
+<body id="body-pd" class="body-pd" style="min-height: 100vh;">
+
+  <div class="container">
+    <div class="shop">
+      <div class="row">
+        <div *ngFor="let magasin of lesMagasins" class="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12"
+          style="padding-top: 12px;padding-bottom: 12px;">
+          <a [routerLink]="['/game/institutions/magasins/' + magasin.id]">
+            <div class="card" style="max-width: 300px; margin: 0 auto;">
+              <div class="banner"><img class="image-magasin" [src]="magasin.image_affichage"></div>
+              <h3 class="name" style="margin-top: 11px;font-size: 24px;">{{ magasin.nom }}</h3>
+              <div class="title">
+                <p>{{ magasin.presentation_courte }}</p>
+              </div>
+              <div class="actions" style="padding-right: 0px;">
+                <div class="container" style="padding-right: 0px;padding-left: 0px;">
+                  <div class="row justify-content-center align-items-center">
+                    <div class="col-3"><img class="rounded-circle z-depth-2" width="35px" alt=""
+                        src="https://cdn3.iconfinder.com/data/icons/astronautics-technology-2/64/Earth-world-star-global-space-512.png">
+                    </div>
+                    <div class="col-9 align-self-center" style="padding-right: 0px;padding-left: 0px;">
+                      <div class="d-flex align-items-center">
+                        <p width="200px" style="margin-bottom: 0rem;"><strong>{{ magasin.id_entreprise.nom }}</strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>

@@ -1,0 +1,136 @@
+<app-navbar></app-navbar>
+
+<body id="body-pd" class="body-pd" style="min-height: 100vh;">
+
+  <div class="container" style="padding: 12px;">
+    <div class="row gutters">
+      <div class="card" style="margin-bottom: 0px;">
+        <div class="card-body">
+          <div class="row d-flex align-items-center">
+            <div class="col-xl-11 col-lg-10 col-md-9 col-sm-8 col-8 h-100">
+              <h1 class="text-center" style="margin-bottom: 0px;">{{ rayon.nom }}</h1>
+            </div>
+            <div class="col-xl-1 col-lg-2 col-md-3 col-sm-4 col-4 align-items-end">
+              <img (click)="afficherPanier()" src="../assets/img/caddie.png" style="height: 55px;cursor: pointer;" data-bs-target="#modal-1"
+                data-bs-toggle="modal">
+              <div class="modal fade" role="dialog" tabindex="-1" id="modal-1">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header" style="color: #4723D9;">
+                      <h4 class="modal-title"><strong>Passer en caisse</strong></h4><button type="button"
+                        class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" style="background: #f2f2f2;">
+
+                      <div class="row" style="background: #f2f2f2;">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                          <!-- INSPO:  https://www.behance.net/gallery/69583099/Mobile-Flights-App-Concept -->
+                          <div align="center" class="ticket">
+                            <div class="ticket-system">
+                              <div class="top">
+                                <div class="printer">
+                                </div>
+                                <div class="receipts-wrapper">
+                                  <div class="receipts">
+                                    <div class="receipt">
+                                      <img style="width:100%" alt
+                                        src="../assets/img/logo%20moll%20center%20facture.png">
+                                      <div style="margin-top:20px; margin-bottom:20px" class="details">
+
+                                        <div *ngFor="let leProduit of compositionPanier" class="row justify-content-between">
+                                          <div class="col-5">
+                                            <span><strong>{{ leProduit.id_produitRayon.id_produit.nom }}</strong></span>
+                                          </div>
+                                          <div class="col-3">
+                                            <span style="font-style: italic; font-size: .8em">{{ leProduit.quantite }}</span>
+                                          </div>
+                                          <div class="col-4">
+                                            <span style="color:rgba(28, 28, 28, .7); font-size: .8em;">{{ leProduit.id_produitRayon.prix * leProduit.quantite }} €</span>
+                                          </div>
+                                        </div>
+
+
+                                      </div>
+                                    </div>
+                                    <div class="receipt qr-code">
+                                      <div class="description">
+                                        <h2 style="width: 9.5em;">Total : {{ this.total  | number:'1.0-2'}} €</h2>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="modal-footer justify-content-center"><img class="tada animated je-paye"
+                        src="../assets/img/argent-liquide.png" style="margin-left: 31px;"
+                        (click)="payerEnArgentLiquide()"><img class="tada animated je-paye"
+                        src="../assets/img/cb.png" (click)="payerEnCarte()">
+                      <div class="payment-animation">
+                        <div class="loader-container">
+                          <svg class="loader loading" viewBox="0 0 55 55" xml:space="preserve">
+                            <circle class="loader-circle" cx="27.5" cy="27.5" r="27.5" />
+                            <path class="loader-path"
+                              d="M17.5,42.3l23.2-23.2L23.9,35.9l-17-17c3.4-8.1,11.3-13.7,20.6-13.7c12.3,0,22.3,10,22.3,22.3 s-10,22.3-22.3,22.3S5.2,39.8,5.2,27.5c0-3.1,0.6-6,1.7-8.6" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top: 15px;">
+        <div class="card h-100">
+          <div class="card-body" style="padding-bottom: 0px;">
+            <div class="row gutters">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <h5><img src="../assets/img/10.png" style="width: 30px;">Informations</h5>
+                <div class="container" style="padding: 0px;">
+                  <div class="row">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- les produits -->
+      <div *ngFor="let produit of produits" class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6"
+        style="margin-top: 62px;cursor: pointer;margin-bottom: 17px;">
+        <div class="card h-100" style="margin-bottom: 0px;">
+          <div class="d-flex justify-content-center"><img data-bss-hover-animate="swing"
+              style="margin-top: -45px;width: 80px;height: 80px;" [src]="produit.id_produit.image"></div>
+          <h5 class="text-center" style="padding-top: 9px;"><strong>{{ produit.id_produit.nom }}</strong></h5>
+          <h5 class="text-center" style="color: rgb(41,33,33);"><em>{{ produit.prix }}€</em></h5>
+          <div class="card-body" style="padding: 0.5rem 0.5rem 1rem;padding-bottom: 8px;">
+            <div class="input-group mb-3">
+              <input [(ngModel)]="produit.quantite_choix" type="number" class="form-control"
+                aria-describedby="nbproduit" style="border-radius: 10px 0px 0px 10px;">
+              <div (click)="ajouterAuPanier(produit, this.produit.quantite_choix)" class="input-group-append">
+                <span id="nbproduit" class="input-group-text" style="border-radius: 0px 10px 10px 0px;"><img
+                    style="width: 30px;height: 30px;" src="../assets/img/add-shop.png"></span>
+              </div>
+            </div>
+            <div class="row justify-content-between">
+              <div class="col">
+                <p style="font-size: 13px;margin-bottom: 0px;">Quantité:</p>
+              </div>
+              <div class="col">
+                <p class="text-end" style="font-size: 13px;margin-bottom: 0px;color: rgb(61,190,0);">
+                  <strong>{{ produit.quantite }}</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>

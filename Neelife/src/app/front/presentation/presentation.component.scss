@@ -1,0 +1,22 @@
+.fit-cover {
+  object-fit: cover;
+}
+
+.taille {
+  width: 189px;
+  height: 189px;
+}
+
+#img-1 {
+  width: 250px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .text-media {
+    margin-right: 150%;
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+

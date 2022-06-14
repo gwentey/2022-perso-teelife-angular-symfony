@@ -1,0 +1,437 @@
+<app-navbar></app-navbar>
+
+<body id="body-pd" class="body-pd" style="min-height: 100vh;">
+
+  <div class="container" style="padding: 12px;">
+    <div class="row gutters">
+      <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12" style="margin-top: 15px;">
+        <div class="card h-100">
+          <div class="card-body" style="padding-bottom: 0px;">
+            <div class="account-settings">
+              <div class="user-profile">
+                <div class="user-avatar"><img class="moi-avatar-taille" src="../assets/img/Pol_defaut.png"
+                    alt="Gwentey Rupi" style="margin-right: -24px;"></div>
+                <h5 class="user-name">{{ personnage.prenom + " " + personnage.nom }}</h5>
+                <h6 class="user-email">19 ans</h6>
+              </div>
+            </div>
+            <h4 class="text-center border rounded-pill d-flex justify-content-center bg-primary"
+              style="color: var(--bs-dark);">Inspecteur fiscal</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12" style="margin-top: 15px;">
+        <div class="card h-100">
+          <div class="card-body" style="padding-bottom: 0px;">
+            <div class="row gutters">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <h5>Ma santé</h5>
+              </div>
+              <div class="container" style="height: auto;margin: 2px;margin-bottom: 13px;">
+                <div class="row align-items-center image-moi-forover">
+                  <div class="col-1"><img src="../assets/img/coeur-moi.png" style="width: 20px;position: initial;">
+                  </div>
+                  <div class="col">
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" aria-valuenow="10"
+                        aria-valuemin="0" aria-valuemax="100" role="progressbar" style="width: 80%;">70%</div>
+                    </div><span class="image-moi-forover">Vitalité</span>
+                  </div>
+                </div>
+              </div>
+              <div class="container" style="height: auto;margin: 2px;margin-bottom: 13px;">
+                <div class="row align-items-center image-moi-forover">
+                  <div class="col-1"><img src="../assets/img/couverts-moi.png" style="width: 20px;"></div>
+                  <div class="col">
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" aria-valuenow="10"
+                        aria-valuemin="0" aria-valuemax="100" role="progressbar" style="width: 40%;">40%</div>
+                    </div><span class="image-moi-forover">Faim</span>
+                  </div>
+                </div>
+              </div>
+              <div class="container" style="height: auto;margin: 2px;margin-bottom: 13px;">
+                <div class="row align-items-center image-moi-forover">
+                  <div class="col-1"><img src="../assets/img/water-moi.png" style="width: 20px;"></div>
+                  <div class="col">
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" aria-valuenow="10"
+                        aria-valuemin="0" aria-valuemax="100" role="progressbar" style="width: 40%;">40%</div>
+                    </div><span class="image-moi-forover">Soif</span>
+                  </div>
+                </div>
+              </div>
+              <div class="container" style="height: auto;margin: 2px;margin-bottom: 13px;">
+                <div class="row align-items-center image-moi-forover">
+                  <div class="col-1"><img src="../assets/img/santé-moi.png" style="width: 20px;"></div>
+                  <div class="col">
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" aria-valuenow="10"
+                        aria-valuemin="0" aria-valuemax="100" role="progressbar" style="width: 40%;">40%</div>
+                    </div><span class="image-moi-forover">Santé</span>
+                  </div>
+                </div>
+              </div>
+              <div class="container" style="height: auto;margin: 2px;margin-bottom: 13px;">
+                <div class="row align-items-center image-moi-forover">
+                  <div class="col-1"><img src="../assets/img/sport-moi.png" style="width: 20px;"></div>
+                  <div class="col">
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" aria-valuenow="10"
+                        aria-valuemin="0" aria-valuemax="100" role="progressbar" style="width: 40%;">40%</div>
+                    </div><span class="image-moi-forover">Physique</span>
+                  </div>
+                </div>
+              </div>
+              <div class="container" style="height: auto;margin: 2px;margin-bottom: 13px;">
+                <div class="row align-items-center image-moi-forover">
+                  <div class="col-1"><img src="../assets/img/bonheur-moi.png" style="width: 20px;"></div>
+                  <div class="col">
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" aria-valuenow="10"
+                        aria-valuemin="0" aria-valuemax="100" role="progressbar" style="width: 40%;">40%</div>
+                    </div><span class="image-moi-forover">Bonheur</span>
+                  </div>
+                </div>
+              </div>
+              <div class="container" style="height: auto;margin: 2px;margin-bottom: 13px;">
+                <div class="row align-items-center image-moi-forover">
+                  <div class="col-1"><img src="../assets/img/gentillesse-moi.png" style="width: 20px;"></div>
+                  <div class="col">
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" aria-valuenow="10"
+                        aria-valuemin="0" aria-valuemax="100" role="progressbar" style="width: 40%;">40%</div>
+                    </div><span class="image-moi-forover">Gentillesse</span>
+                  </div>
+                </div>
+              </div>
+              <div class="container" style="height: auto;margin: 2px;margin-bottom: 13px;">
+                <div class="row align-items-center image-moi-forover">
+                  <div class="col-1"><img src="../assets/img/proprete-moi.png" style="width: 20px;"></div>
+                  <div class="col">
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" aria-valuenow="10"
+                        aria-valuemin="0" aria-valuemax="100" role="progressbar" style="width: 40%;">40%</div>
+                    </div><span class="image-moi-forover">Propreté</span>
+                  </div>
+                </div>
+              </div>
+              <div class="container" style="height: auto;margin: 2px;margin-bottom: 13px;">
+                <div class="row align-items-center image-moi-forover">
+                  <div class="col-1"><img src="../assets/img/maladies-moi.png" style="width: 20px;"></div>
+                  <div class="col">
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" aria-valuenow="10"
+                        aria-valuemin="0" aria-valuemax="100" role="progressbar" style="width: 40%;">40%</div>
+                    </div><span class="image-moi-forover">Maladie</span>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div id="custom-col-moi-1" class="col" style="padding: 0px;">
+                  <div class="container" style="height: auto;margin: 2px;padding-left: 13px;">
+                    <div class="row align-items-center image-moi-forover">
+                      <div class="col-1" style="margin-right: -12px;"><img src="../assets/img/urine-moi.png"
+                          style="width: 20px;"></div>
+                      <div class="col">
+                        <div class="progress" style="margin-left: 12px;margin-right: -17px;">
+                          <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning"
+                            aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" role="progressbar"
+                            style="width: 40%;">40%</div>
+                        </div><span class="image-moi-forover">Urine</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col" style="padding: 0px;">
+                  <div class="container" style="height: auto;margin: 2px;margin-bottom: 13px;">
+                    <div class="row align-items-center image-moi-forover">
+                      <div class="col-1" style="margin-right: 0px;"><img src="../assets/img/selles-moi.png"
+                          style="width: 20px;margin-left: -8px;margin-top: -2px;"></div>
+                      <div class="col">
+                        <div class="progress" style="margin-right: -34px;margin-left: -5px;">
+                          <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning"
+                            aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" role="progressbar"
+                            style="width: 40%;">40%</div>
+                        </div><span class="image-moi-forover">Selles</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container" style="height: auto;margin: 2px;margin-bottom: 13px;">
+                <div class="row align-items-center image-moi-forover">
+                  <div class="col-1"><img src="../assets/img/dechets-moi.png" style="width: 20px;"></div>
+                  <div class="col">
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" aria-valuenow="10"
+                        aria-valuemin="0" aria-valuemax="100" role="progressbar" style="width: 40%;">40%</div>
+                    </div><span class="image-moi-forover">Déchêts</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12" style="margin-top: 15px;">
+        <div class="card h-50" style="margin-bottom: 8px;">
+          <div class="card-body" style="padding-bottom: 0px;">
+            <div class="account-settings">
+              <div class="user-profile" style="padding-bottom: 0px;">
+                <h5 class="user-name">Ma situation</h5>
+                <div class="container h-100" style="margin-top: 14px;">
+                  <div class="row align-items-center h-100 justify-content-md-center image-moi-forover-situation">
+                    <div class="col-4"><img src="../assets/img/moi-situation-liquide1.png" style="width: 30px;"></div>
+                    <div class="col" style="padding-right: 0;padding-left: 0;">
+                      <p style="margin: 0px;text-align: left;"><strong>{{ personnage.situationPersonnage['argent_liquide'] }} €</strong></p><span
+                        class="image-moi-forover-situation" style="margin-left: -75px;margin-top: -2px;">Argent
+                        liquide</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="container h-100" style="margin-top: 14px;">
+                  <div class="row align-items-center h-100 justify-content-md-center image-moi-forover-situation">
+                    <div class="col-4"><img src="../assets/img/moi-situation-banque.png" style="width: 30px;"></div>
+                    <div class="col" style="padding-right: 0;padding-left: 0;">
+                      <p style="margin: 0px;text-align: left;"><strong>564 123,48 €</strong></p><span
+                        class="image-moi-forover-situation" style="margin-left: -75px;margin-top: -2px;">Compte en
+                        banque</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="container h-100" style="margin-top: 14px;">
+                  <div class="row align-items-center h-100 justify-content-md-center image-moi-forover-situation">
+                    <div class="col-4"><img src="../assets/img/moi-situation-goldentee.png" style="width: 30px;"></div>
+                    <div class="col" style="padding-right: 0;padding-left: 0;">
+                      <p style="margin: 0px;text-align: left;"><strong>{{ personnage.situationPersonnage['goldentee'] }} G-Tee</strong></p><span
+                        class="image-moi-forover-situation"
+                        style="margin-left: -75px;margin-top: -2px;">Golden-Tee</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="container h-100" style="margin-top: 14px;">
+                  <div class="row align-items-center h-100 justify-content-md-center image-moi-forover-situation">
+                    <div class="col-4"><img src="../assets/img/moi-situation-sale.png" style="width: 30px;"></div>
+                    <div class="col" style="padding-right: 0;padding-left: 0;">
+                      <p style="margin: 0px;text-align: left;color: rgb(132,2,2);"><strong>{{ personnage.situationPersonnage['argent_sale'] }} €</strong></p><span
+                        class="image-moi-forover-situation" style="margin-left: -75px;margin-top: -2px;">Argent
+                        sale</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card" style="height: 250px;">
+          <div class="card-body" style="padding-right: 25px;padding-bottom: 0px;">
+            <div class="account-settings">
+              <div class="user-profile">
+                <h5 class="user-name" style="margin-bottom: 14px;">Mes diplomes</h5>
+                <div class="container" style="padding: 0px;padding-top: 13px;">
+                  <div class="row">
+                    <div class="col-4 diplome-moi-icon image-moi-forover-diplome"><img class="image-moi-diplome"
+                        src="../assets/img/moi-diplomes-droit.png"><span class="image-moi-forover-diplome"
+                        style="margin-left: -127px;">DTL Droit</span></div>
+                    <div class="col-4 diplome-moi-icon image-moi-forover-diplome"><img class="image-moi-diplome"
+                        src="../assets/img/moi-diplomes-economie.png"><span class="image-moi-forover-diplome">DTL
+                        Finance&nbsp;</span></div>
+                    <div class="col-4 diplome-moi-icon image-moi-forover-diplome"><img class="image-moi-diplome"
+                        src="../assets/img/moi-diplomes-gambling.png"><span class="image-moi-forover-diplome">DTL
+                        Gambling</span></div>
+                    <div class="col-4 diplome-moi-icon image-moi-forover-diplome"><img class="image-moi-diplome"
+                        src="../assets/img/moi-diplomes-politque.png"><span class="image-moi-forover-diplome">DTL
+                        Science-politique</span></div>
+                    <div class="col-4 diplome-moi-icon image-moi-forover-diplome"><img class="image-moi-diplome"
+                        src="../assets/img/moi-diplomes-fiscalite.png"><span class="image-moi-forover-diplome">DTL
+                        Inspection Fiscale</span></div>
+                    <div class="col-4 diplome-moi-icon image-moi-forover-diplome"><img class="image-moi-diplome"
+                        src="../assets/img/moi-diplomes-psycologie.png"><span class="image-moi-forover-diplome">DTL
+                        Psycologie</span></div>
+                    <div class="col-4 diplome-moi-icon image-moi-forover-diplome"><img class="image-moi-diplome"
+                        src="../assets/img/moi-diplomes-droit.png"><span class="image-moi-forover-diplome">DTL
+                        Droit</span></div>
+                    <div class="col-4 diplome-moi-icon image-moi-forover-diplome"><img class="image-moi-diplome"
+                        src="../assets/img/moi-diplomes-droit.png"><span class="image-moi-forover-diplome">DTL
+                        Droit</span></div>
+                    <div class="col-4 diplome-moi-icon" style="cursor: pointer;"><img data-bss-hover-animate="tada"
+                        class="image-moi-diplome" src="../assets/img/suivant-grand.png"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12" style="margin-top: 15px;">
+        <div class="card h-100">
+          <div class="card-body" style="padding-bottom: 1px;">
+            <div class="row gutters">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <h5>Mes addictions</h5>
+                <div class="container" style="padding: 0px;">
+                  <div class="row" style="margin-top: 16px;">
+                    <div class="col-2 diplome-moi-icon image-moi-forover-situation"><img class="image-moi-diplome"
+                        src="../assets/img/moi-addictions-caffee.png"><span
+                        class="image-moi-forover-situation">Café</span></div>
+                    <div class="col-2 diplome-moi-icon image-moi-forover-situation"><img class="image-moi-diplome"
+                        src="../assets/img/moi-addictions-gambling.png"><span class="image-moi-forover-situation">Jeu
+                        d'argent<br></span></div>
+                    <div class="col-2 diplome-moi-icon image-moi-forover-situation"><img class="image-moi-diplome"
+                        src="../assets/img/moi-addictions-mal-bouffe.png"><span
+                        class="image-moi-forover-situation">Malbouffe</span></div>
+                    <div class="col-2 diplome-moi-icon image-moi-forover-situation"><img class="image-moi-diplome"
+                        src="../assets/img/moi-addictions-caffee.png"><span
+                        class="image-moi-forover-situation">Café</span></div>
+                    <div class="col-2 diplome-moi-icon image-moi-forover-situation"><img class="image-moi-diplome"
+                        src="../assets/img/moi-addictions-caffee.png"><span
+                        class="image-moi-forover-situation">Café</span></div>
+                    <div class="col-2 diplome-moi-icon" style="cursor: pointer;padding-left: 6px;"><img
+                        data-bss-hover-animate="tada" class="image-moi-diplome" src="../assets/img/suivant-grand.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12" style="margin-top: 15px;">
+        <div class="card h-100">
+          <div class="card-body" style="padding-bottom: 0px;">
+            <div class="row gutters">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <h5>Interactions</h5>
+                <div class="container" style="padding: 0px;">
+                  <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
+                      <div class="h-50 d-inline-block">
+                        <div class="container h-100" style="padding-bottom: 3px;">
+                          <div
+                            class="row align-items-center h-100 justify-content-md-center image-moi-forover-situation">
+                            <div class="col"><img src="../assets/img/moi-interraction-bisoux.png" style="width: 30px;">
+                            </div>
+                            <div class="col" style="padding-right: 0;padding-left: 0; min-width: 22px;">
+                              <p style="margin: 0px;text-align: left;"><strong>{{ personnage.interactionsPersonnage['bisous'] }}</strong></p><span
+                                class="image-moi-forover-situation"
+                                style="margin-left: -75px;margin-top: -2px;">Bisoux</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="h-50 d-inline-block">
+                        <div class="container h-100" style="padding-top: 2px;">
+                          <div
+                            class="row align-items-center h-100 justify-content-md-center image-moi-forover-situation">
+                            <div class="col"><img src="../assets/img/moi-interraction-calins.png" style="width: 30px;">
+                            </div>
+                            <div class="col" style="padding-right: 0;padding-left: 0; min-width: 22px;">
+                              <p style="margin: 0px;text-align: left;"><strong>{{ personnage.interactionsPersonnage['calins'] }}</strong></p><span
+                                class="image-moi-forover-situation"
+                                style="margin-left: -75px;margin-top: -2px;">Calins</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
+                      <div class="h-50 d-inline-block">
+                        <div class="container h-100" style="padding-bottom: 3px;">
+                          <div
+                            class="row align-items-center h-100 justify-content-md-center image-moi-forover-situation">
+                            <div class="col"><img src="../assets/img/moi-interraction-charmes.png" style="width: 30px;">
+                            </div>
+                            <div class="col" style="padding-right: 0;padding-left: 0; min-width: 22px;">
+                              <p style="margin: 0px;text-align: left;"><strong>{{ personnage.interactionsPersonnage['charmes'] }}</strong></p><span
+                                class="image-moi-forover-situation"
+                                style="margin-left: -75px;margin-top: -2px;">Charmes</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="h-50 d-inline-block">
+                        <div class="container h-100" style="padding-top: 2px;">
+                          <div
+                            class="row align-items-center h-100 justify-content-md-center image-moi-forover-situation">
+                            <div class="col"><img src="../assets/img/moi-interraction-sourrires.png"
+                                style="width: 30px;"></div>
+                            <div class="col" style="padding-right: 0;padding-left: 0; min-width: 22px;">
+                              <p style="margin: 0px;text-align: left;"><strong>{{ personnage.interactionsPersonnage['sourires'] }}</strong></p><span
+                                class="image-moi-forover-situation"
+                                style="margin-left: -75px;margin-top: -2px;">Sourires</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
+                      <div class="h-50 d-inline-block">
+                        <div class="container h-100" style="padding-bottom: 3px;">
+                          <div
+                            class="row align-items-center h-100 justify-content-md-center image-moi-forover-situation">
+                            <div class="col"><img src="../assets/img/moi-interraction-clins-doeils.png"
+                                style="width: 30px;"></div>
+                            <div class="col" style="padding-right: 0;padding-left: 0; min-width: 22px;">
+                              <p style="margin: 0px;text-align: left;"><strong>{{ personnage.interactionsPersonnage['clins_doeil'] }}</strong></p><span
+                                class="image-moi-forover-situation" style="margin-left: -75px;margin-top: -2px;">Clins
+                                D'oeil</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="h-50 d-inline-block">
+                        <div class="container h-100" style="padding-top: 2px;">
+                          <div
+                            class="row align-items-center h-100 justify-content-md-center image-moi-forover-situation">
+                            <div class="col"><img src="../assets/img/moi-interraction-main-serrer.png"
+                                style="width: 30px;"></div>
+                            <div class="col" style="padding-right: 0;padding-left: 0; min-width: 22px;">
+                              <p style="margin: 0px;text-align: left;"><strong>{{ personnage.interactionsPersonnage['mains_serrees'] }}</strong></p><span
+                                class="image-moi-forover-situation" style="margin-left: -75px;margin-top: -2px;">Mains
+                                serrées</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
+                      <div class="h-50 d-inline-block">
+                        <div class="container h-100" style="padding-bottom: 3px;">
+                          <div
+                            class="row align-items-center h-100 justify-content-md-center image-moi-forover-situation">
+                            <div class="col"><img src="../assets/img/moi-interraction-gifle.png" style="width: 30px;">
+                            </div>
+                            <div class="col" style="padding-right: 0;padding-left: 0; min-width: 22px;">
+                              <p style="margin: 0px;text-align: left;"><strong>{{ personnage.interactionsPersonnage['gifles'] }}</strong></p><span
+                                class="image-moi-forover-situation"
+                                style="margin-left: -75px;margin-top: -2px;">Gifles</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="h-50 d-inline-block">
+                        <div class="container h-100" style="padding-top: 2px;">
+                          <div
+                            class="row align-items-center h-100 justify-content-md-center image-moi-forover-situation">
+                            <div class="col"><img src="../assets/img/moi-interraction-croche-patte.png"
+                                style="width: 30px;"></div>
+                            <div class="col" style="padding-right: 0;padding-left: 0; min-width: 22px;">
+                              <p style="margin: 0px;text-align: left;"><strong>{{ personnage.interactionsPersonnage['corche_pieds'] }}</strong></p><span
+                                class="image-moi-forover-situation"
+                                style="margin-left: -75px;margin-top: -2px;">Croche-pieds</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+

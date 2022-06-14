@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+</head>
+
+<div id="sidemenu">
+  <header id="header" class="header body-pd" style="height: 64px;">
+    <div id="header_toggle-1" class="header_toggle"><i class="fa fa-star bx bx-menu bx-x" id="header-toggle"></i>
+    </div>
+    <div class="container-fluid justify-content-end" style="visibility: hidden;min-width: 26%;"></div>
+    <div class="row" style="margin: 0px;">
+      <div class="col" style="padding-right: 0px;">
+        <div class="dropdown link"><img class="btn dropdown-toggle img-header"
+            src="../../../assets/img/menu-message.png" data-bs-toggle="dropdown" aria-expanded="true">
+          <div class="link__indicator link__indicator--not-smooth"
+            style="margin-top: 10px;padding-top: 0px;margin-right: 21px;"></div>
+          <div class="dropdown-menu message">
+            <div class="row">
+              <div class="dropdown-item custom" style="max-width: 100%;"><img class="dropdown-image custom message"
+                  src="../../../assets/img/1051912.png"><a class="dropdown-text custom col text-secondary message-name"
+                  href="#" style="margin-left: 6px;"><strong>Lucas Heron</strong></a>
+                <p
+                  style="position: relative;padding-right: 0px;margin-top: -25px;margin-left: 59px;white-space: normal;line-height: 13px;max-height: 39px;display: block;max-width: 191px;margin-bottom: 1px;overflow-wrap: break-word;color: #6c757d;">
+                  Salut comment tu vas ? Personnellement tout vas pour le mieux je souhait...</p><a
+                  class="dropdown-text custom col text-secondary message-name" href="#"></a>
+              </div>
+              <hr class="custom">
+              <div class="dropdown-item custom" style="max-width: 100%;"><img class="dropdown-image custom message"
+                  src="../../../assets/img/3-Doctor-512.webp"><a
+                  class="dropdown-text custom col text-secondary message-name" href="#"
+                  style="margin-left: 6px;"><strong>Lucie Arthuro</strong></a>
+                <p
+                  style="position: relative;padding-right: 0px;margin-top: -25px;margin-left: 59px;white-space: normal;line-height: 13px;max-height: 39px;display: block;max-width: 191px;margin-bottom: 1px;overflow-wrap: break-word;color: #6c757d;">
+                  Je suis d'accord avec votre proposition !</p><a
+                  class="dropdown-text custom col text-secondary message-name" href="#"></a>
+              </div>
+              <hr class="custom">
+              <div class="dropdown-item custom message-tout"><a class="dropdown-text custom col text-secondary message"
+                  href="#"><strong>Voir tout les
+                    messages</strong></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="margin: 0px;min-width: 200px;">
+      <div class="col" style="padding-right: 0px;">
+        <div class="dropdown">
+          <div class="link__indicator link__indicator--not-smooth"
+            style="margin-top: 10px;padding-top: 0px;margin-right: 21px;"></div><img
+            class="btn dropdown-toggle img-header" src="../../../assets/img/30-Scientist-512.webp"
+            data-bs-toggle="dropdown" aria-expanded="true">
+          <div class="dropdown-menu">
+            <div class="row">
+              <div class="dropdown-item custom"><img class="dropdown-image custom"
+                  src="../../../assets/img/Hand_53-512.webp">
+                <div id="notification-dropdown-haut" class="link__indicator link__indicator--not-smooth"></div><a
+                  class="dropdown-text custom col text-secondary" href="#">Profile</a>
+              </div>
+              <div class="dropdown-item custom"><img class="dropdown-image custom"
+                  src="../../../assets/img/reglages.webp"><a class="dropdown-text custom col text-secondary"
+                  href="#">Réglages</a></div>
+              <hr class="custom">
+              <div class="dropdown-item custom"><img class="dropdown-image custom"
+                  src="../../../assets/img/logout.webp"><a class="dropdown-text custom col text-secondary"
+                  href="#">Déconnexion</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="information-perso" class="col">
+        <div style="padding: 0px;padding-top: 0px;">
+          <h6 style="margin: 0px;white-space: nowrap;min-width: 80px;">{{ personnage.prenom + " " +personnage.nom  }}&nbsp;</h6>
+        </div>
+        <div class="row" style="margin: 0px;">
+          <h6 class="col" style="margin: 0px;padding: 1px;font-size: 12px;color: var(--bs-teal);">
+            <strong>{{ personnage.situationPersonnage['argent_liquide'] }}&nbsp;€</strong>
+          </h6>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div id="nav-bar" class="l-navbar show">
+    <nav class="nav">
+      <div>
+        <div style="height: 80px;"><img src="../../../../assets/img/logo.png" [routerLink]="['/game/accueil']"></div>
+        <div class="nav_list"><a class="nav_link" href="#">
+            <div class="link__indicator link__indicator--not-smooth notification-menu"></div><img class="img-menu"
+              src="../../../assets/img/objectif.png"><span class="nav_name">Mes objectifs</span>
+          </a>
+          <hr class="hr-menu"><a class="nav_link" [routerLink]="['/game/moi']">
+            <div class="link__indicator link__indicator--not-smooth notification-menu"></div><img class="img-menu"
+              src="../../../assets/img/menu-moi.png"><span class="nav_name">Moi</span>
+          </a><a class="nav_link" href="#"><img class="img-menu" src="../../../assets/img/menu-house.png"><span
+              class="nav_name">Chez moi</span></a><a class="nav_link" href="#"><img class="img-menu"
+              src="../../../assets/img/menu-family.png"><span class="nav_name">Ma famille</span></a><a class="nav_link"
+            href="#"><img class="img-menu" src="../../../assets/img/menu-wallet.png"><span class="nav_name">Mes
+              finances</span></a><a class="nav_link" href="#"><img class="img-menu"
+              src="../../../assets/img/menu-work.png"><span class="nav_name">Mon travail</span></a>
+          <hr class="hr-menu"><a [routerLink]="['/game/institutions/map']" class="nav_link" href="#"><img class="img-menu"
+              src="../../../assets/img/menu-city.png"><span class="nav_name">Institution</span></a><a class="nav_link"
+            href="#"><img class="img-menu" src="../../../assets/img/menu-ville.webp"><span class="nav_name">Ma
+              ville</span></a><a class="nav_link" href="#"><img class="img-menu"
+              src="../../../assets/img/menu-pays.png"><span class="nav_name">Le pays</span></a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>TeeLife</title>
+
+</head>
+
+
+<body>
+  <nav class="navbar navbar-light navbar-expand-lg navigation-clean-button">
+    <div class="container"><a class="navbar-brand" [routerLink]="['/accueil']">TeeLife</a><button data-bs-toggle="collapse"
+        class="navbar-toggler" data-bs-target="#navcol-2">
+        <span class="visually-hidden">Toggle navigation</span>
+        <span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navcol-2">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/accueil']" routerLinkActive="active">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/presentation']" routerLinkActive="active">Présentation</a></li>
+        </ul><span class="navbar-text actions"> <a class="login" [routerLink]="['/connexion']" >Connexion</a><a
+            class="btn btn-light action-button" role="button" [routerLink]="['/inscription']" >Inscription</a></span>
+      </div>
+    </div>
+  </nav>
