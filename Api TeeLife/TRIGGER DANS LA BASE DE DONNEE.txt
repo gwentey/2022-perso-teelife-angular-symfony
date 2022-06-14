@@ -1,3 +1,4 @@
+DELIMITER |
 CREATE TRIGGER `INSERT_PERSONNAGE` AFTER INSERT ON `personnage`
  FOR EACH ROW BEGIN
 INSERT INTO sante_personnage (id_personnage_id,vitalite,faim,soif,sante,physique,bonheur,gentilesse,proprete,maladie,urine,selles,dechets) VALUES(NEW.id,100,100,100,100,0,50,0,100,0,0,0,0);
@@ -5,3 +6,4 @@ INSERT INTO interactions_personnage (id_personnage_id,bisous,calins,charmes,sour
 VALUES(NEW.id,0,0,0,0,0,0,0,0);
 INSERT INTO situation_personnage (id_personnage_id, argent_liquide, goldentee, argent_sale) VALUES(NEW.id,150,0,0);
 END
+|
